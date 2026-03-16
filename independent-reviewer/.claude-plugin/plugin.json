@@ -1,0 +1,15 @@
+{
+    "name": "independent-reviewer",
+    "description": "Carry out independent reviews of all changes since last commit.",
+    "version": "1.0.0",
+    "permissions": {
+        "allow": [
+            "Edit planning/REVIEW.md",
+            "Write planning/REVIEW.md",
+            "Read planning/**",
+            "Glob",
+            "Grep",
+            "Bash(git *)"
+        ]
+    }
+}
