@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-background: #0d1117;
+  --color-foreground: #e6edf3;
+  --color-surface: #161b22;
+  --color-surface-hover: #1c2333;
+  --color-border: #30363d;
+  --color-border-light: #21262d;
+  --color-text-muted: #8b949e;
+  --color-text-secondary: #c9d1d9;
+  --color-accent-yellow: #ecad0a;
+  --color-accent-blue: #209dd7;
+  --color-accent-purple: #753991;
+  --color-profit: #3fb950;
+  --color-loss: #f85149;
+  --color-profit-bg: rgba(63, 185, 80, 0.15);
+  --color-loss-bg: rgba(248, 81, 73, 0.15);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-mono), monospace;
+}
+
+/* Price flash animations */
+.flash-green {
+  animation: flash-green 500ms ease-out;
+}
+.flash-red {
+  animation: flash-red 500ms ease-out;
+}
+
+@keyframes flash-green {
+  0% { background-color: rgba(63, 185, 80, 0.3); }
+  100% { background-color: transparent; }
+}
+
+@keyframes flash-red {
+  0% { background-color: rgba(248, 81, 73, 0.3); }
+  100% { background-color: transparent; }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-muted);
+}
