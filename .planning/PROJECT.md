@@ -39,19 +39,20 @@ Users can watch live-streaming prices, trade a simulated portfolio, and chat wit
 - ✓ LLM mock mode for testing (LLM_MOCK=true) — Phase 3
 - ✓ Chat message persistence — Phase 3
 
+- ✓ Next.js frontend with static export (`output: 'export'`) — Phase 4
+- ✓ Dark trading terminal aesthetic (Bloomberg-inspired, `#0d1117` backgrounds) — Phase 4
+- ✓ Watchlist panel with live prices, flash animations, sparklines — Phase 4
+- ✓ Main chart area (Lightweight Charts, selected ticker detail) — Phase 4
+- ✓ Portfolio heatmap (Recharts Treemap, P&L colored) — Phase 4
+- ✓ P&L chart (portfolio value over time from snapshots) — Phase 4
+- ✓ Positions table with live P&L — Phase 4
+- ✓ Trade bar (buy/sell with inline feedback) — Phase 4
+- ✓ AI chat panel (conversation history, inline trade/watchlist confirmations) — Phase 4
+- ✓ Header with portfolio value, cash balance, connection status indicator — Phase 4
+- ✓ SSE connection with EventSource and auto-reconnection — Phase 4
+
 ### Active
 
-- [ ] Next.js frontend with static export
-- [ ] Dark trading terminal aesthetic (Bloomberg-inspired)
-- [ ] Watchlist panel with live prices, flash animations, sparklines
-- [ ] Main chart area (selected ticker detail)
-- [ ] Portfolio heatmap (treemap by weight, colored by P&L)
-- [ ] P&L chart (portfolio value over time)
-- [ ] Positions table (ticker, qty, avg cost, current price, P&L)
-- [ ] Trade bar (ticker, quantity, buy/sell buttons)
-- [ ] AI chat panel (message input, conversation history, inline trade confirmations)
-- [ ] Header with portfolio value, cash balance, connection status indicator
-- [ ] SSE connection with EventSource and auto-reconnection
 - [ ] Multi-stage Dockerfile (Node build → Python runtime)
 - [ ] Start/stop scripts (macOS/Linux + Windows PowerShell)
 - [ ] Docker volume for SQLite persistence
@@ -70,7 +71,7 @@ Users can watch live-streaming prices, trade a simulated portfolio, and chat wit
 
 ## Context
 
-- **Existing code:** Market data subsystem complete in `backend/app/market/`. Database layer, watchlist API, portfolio/trade API, LLM chat integration complete in `backend/app/db/`, `backend/app/routes/`, and `backend/app/llm/`. 136 tests passing.
+- **Existing code:** Full backend complete: market data, database, watchlist/portfolio APIs, LLM chat. Frontend complete: Next.js terminal with all panels. 136 backend tests, frontend builds to static export.
 - **Tech stack:** Python 3.12 / FastAPI / uv (backend), Next.js / TypeScript (frontend), SQLite, LiteLLM → OpenRouter with Cerebras inference
 - **Color scheme:** Accent Yellow `#ecad0a`, Blue Primary `#209dd7`, Purple Secondary `#753991`
 - **Background:** `#0d1117` or `#1a1a2e`, muted gray borders, no pure black
@@ -97,7 +98,7 @@ Users can watch live-streaming prices, trade a simulated portfolio, and chat wit
 | SQLite with lazy init | Zero config, no migration step, self-contained | ✓ Good — schema created on first run, seed data idempotent |
 | Market orders only | Eliminates order book complexity | ✓ Good — instant fill at PriceCache price, clean portfolio math |
 | Repository pattern for DB | Separate SQL from route handlers | ✓ Good — 12 functions, transaction-aware commit design |
-| Static Next.js export | Single origin, no CORS, one container | — Pending |
+| Static Next.js export | Single origin, no CORS, one container | ✓ Good — builds to frontend/out/, served by FastAPI |
 | LLM auto-execution (no confirmation) | Simulated environment, zero stakes, impressive demo | ✓ Good — auto-executes trades and watchlist changes from structured output |
 
 ## Evolution
@@ -118,4 +119,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-22 after Phase 3 completion*
+*Last updated: 2026-03-22 after Phase 4 completion*

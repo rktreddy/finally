@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-21)
 
 **Core value:** Users can watch live-streaming prices, trade a simulated portfolio, and chat with an AI assistant that executes trades -- all in a Bloomberg-inspired terminal interface.
-**Current focus:** Phase 04 — frontend-terminal
+**Current focus:** Phase 05 — Docker & E2E Testing
 
 ## Current Position
 
-Phase: 04 (frontend-terminal) — EXECUTING
-Plan: 3 of 3
+Phase: 5
+Plan: Not started
 
 ## Performance Metrics
 
