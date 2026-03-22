@@ -63,11 +63,11 @@ Plans:
   3. When the AI specifies trades in its structured output, those trades are auto-executed through the same trade logic as manual trades, with failures reported in the response
   4. Chat conversation history persists to the database and is included as context in subsequent LLM calls
   5. Setting LLM_MOCK=true returns deterministic mock responses without calling OpenRouter, enabling test automation
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: TBD
-- [ ] 03-02: TBD
+- [ ] 03-01-PLAN.md — LLM module (models, client, prompts, mock), chat repository functions, litellm dependency, and unit tests
+- [ ] 03-02-PLAN.md — Chat route with auto-execution of trades/watchlist changes, wiring into main.py, and integration tests
 
 ### Phase 4: Frontend Terminal
 **Goal**: Users interact with a complete Bloomberg-inspired trading terminal that displays live-streaming prices, charts, portfolio visualizations, a trade bar, and an AI chat panel -- all in a dark, data-dense single-page application
