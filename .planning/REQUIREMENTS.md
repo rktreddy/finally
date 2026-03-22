@@ -24,15 +24,15 @@
 
 ### Portfolio & Trading
 
-- [ ] **PT-01**: User can view portfolio (positions, cash balance, total value, unrealized P&L) via GET /api/portfolio
-- [ ] **PT-02**: User can buy shares at current market price via POST /api/portfolio/trade
-- [ ] **PT-03**: User can sell shares at current market price via POST /api/portfolio/trade
-- [ ] **PT-04**: Buy validation rejects if insufficient cash
-- [ ] **PT-05**: Sell validation rejects if insufficient shares
-- [ ] **PT-06**: Trade history recorded as append-only log
-- [ ] **PT-07**: Portfolio snapshots recorded every 30 seconds by background task
-- [ ] **PT-08**: Portfolio snapshot recorded immediately after each trade
-- [ ] **PT-09**: User can view portfolio value history via GET /api/portfolio/history
+- [x] **PT-01**: User can view portfolio (positions, cash balance, total value, unrealized P&L) via GET /api/portfolio
+- [x] **PT-02**: User can buy shares at current market price via POST /api/portfolio/trade
+- [x] **PT-03**: User can sell shares at current market price via POST /api/portfolio/trade
+- [x] **PT-04**: Buy validation rejects if insufficient cash
+- [x] **PT-05**: Sell validation rejects if insufficient shares
+- [x] **PT-06**: Trade history recorded as append-only log
+- [x] **PT-07**: Portfolio snapshots recorded every 30 seconds by background task
+- [x] **PT-08**: Portfolio snapshot recorded immediately after each trade
+- [x] **PT-09**: User can view portfolio value history via GET /api/portfolio/history
 
 ### LLM Chat
 
@@ -138,15 +138,15 @@
 | WL-03 | Phase 2 | Complete |
 | WL-04 | Phase 2 | Complete |
 | WL-05 | Phase 1 | Complete |
-| PT-01 | Phase 2 | Pending |
-| PT-02 | Phase 2 | Pending |
-| PT-03 | Phase 2 | Pending |
-| PT-04 | Phase 2 | Pending |
-| PT-05 | Phase 2 | Pending |
-| PT-06 | Phase 2 | Pending |
-| PT-07 | Phase 2 | Pending |
-| PT-08 | Phase 2 | Pending |
-| PT-09 | Phase 2 | Pending |
+| PT-01 | Phase 2 | Complete |
+| PT-02 | Phase 2 | Complete |
+| PT-03 | Phase 2 | Complete |
+| PT-04 | Phase 2 | Complete |
+| PT-05 | Phase 2 | Complete |
+| PT-06 | Phase 2 | Complete |
+| PT-07 | Phase 2 | Complete |
+| PT-08 | Phase 2 | Complete |
+| PT-09 | Phase 2 | Complete |
 | LLM-01 | Phase 3 | Pending |
 | LLM-02 | Phase 3 | Pending |
 | LLM-03 | Phase 3 | Pending |

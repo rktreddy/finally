@@ -51,7 +51,7 @@ Plans:
 
 Plans:
 - [x] 02-01-PLAN.md — Repository layer + watchlist CRUD endpoints (GET/POST/DELETE) with integration tests
-- [ ] 02-02-PLAN.md — Portfolio valuation, trade execution, snapshot background task, and portfolio history endpoint with integration tests
+- [x] 02-02-PLAN.md — Portfolio valuation, trade execution, snapshot background task, and portfolio history endpoint with integration tests
 
 ### Phase 3: LLM Chat Integration
 **Goal**: Users can chat with an AI assistant that understands their portfolio and can autonomously execute trades and manage the watchlist through natural language
