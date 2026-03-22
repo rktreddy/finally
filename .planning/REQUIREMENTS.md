@@ -9,10 +9,10 @@
 
 - [x] **DB-01**: SQLite database auto-creates schema and seeds default data on first run (lazy init)
 - [x] **DB-02**: User profile with $10,000 default cash balance persists across restarts
-- [ ] **DB-03**: FastAPI app entry point with lifespan manages startup/shutdown of all subsystems
-- [ ] **DB-04**: Existing market data (PriceCache, SimulatorDataSource, SSE stream) wired into app lifespan
-- [ ] **DB-05**: Health check endpoint returns server status at GET /api/health
-- [ ] **DB-06**: FastAPI serves static Next.js export as catch-all (API routes take priority)
+- [x] **DB-03**: FastAPI app entry point with lifespan manages startup/shutdown of all subsystems
+- [x] **DB-04**: Existing market data (PriceCache, SimulatorDataSource, SSE stream) wired into app lifespan
+- [x] **DB-05**: Health check endpoint returns server status at GET /api/health
+- [x] **DB-06**: FastAPI serves static Next.js export as catch-all (API routes take priority)
 
 ### Watchlist
 
@@ -129,10 +129,10 @@
 |-------------|-------|--------|
 | DB-01 | Phase 1 | Complete |
 | DB-02 | Phase 1 | Complete |
-| DB-03 | Phase 1 | Pending |
-| DB-04 | Phase 1 | Pending |
-| DB-05 | Phase 1 | Pending |
-| DB-06 | Phase 1 | Pending |
+| DB-03 | Phase 1 | Complete |
+| DB-04 | Phase 1 | Complete |
+| DB-05 | Phase 1 | Complete |
+| DB-06 | Phase 1 | Complete |
 | WL-01 | Phase 2 | Pending |
 | WL-02 | Phase 2 | Pending |
 | WL-03 | Phase 2 | Pending |
