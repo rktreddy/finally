@@ -16,6 +16,6 @@ async def health_check(request: Request) -> dict:
     """Return health status of the application."""
     return {
         "status": "healthy",
-        "market_data": request.app.state.cache is not None,
-        "database": request.app.state.db is not None,
+        "market_data": getattr(request.app.state, "cache", None) is not None,
+        "database": getattr(request.app.state, "db", None) is not None,
     }
