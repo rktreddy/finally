@@ -81,8 +81,10 @@ app.include_router(chat_router, prefix="/api")
 app.include_router(create_stream_router(price_cache))
 
 # Static files LAST -- catch-all for frontend (D-12, D-13)
-# Resolve static directory relative to project root
-_static_dir = Path(__file__).resolve().parent.parent.parent / "static"
+# Resolve static directory relative to project root: prefer frontend/out, fallback to static/
+_static_dir = Path(__file__).resolve().parent.parent.parent / "frontend" / "out"
+if not _static_dir.is_dir():
+    _static_dir = Path(__file__).resolve().parent.parent.parent / "static"
 if _static_dir.is_dir():
     app.mount("/", StaticFiles(directory=str(_static_dir), html=True), name="static")
 else:

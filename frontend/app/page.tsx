@@ -11,132 +11,100 @@
 
 import { useCallback, useEffect, useState } from "react";
 import Header from "../components/Header";
+import Watchlist from "../components/Watchlist";
+import TickerChart from "../components/TickerChart";
+import TradeBar from "../components/TradeBar";
+import PortfolioHeatmap from "../components/PortfolioHeatmap";
+import PnLChart from "../components/PnLChart";
+import PositionsTable from "../components/PositionsTable";
+import ChatPanel from "../components/ChatPanel";
 import { useSSE } from "../hooks/useSSE";
-import { fetchPortfolio, fetchWatchlist } from "../lib/api";
-import type { Portfolio, WatchlistItem } from "../lib/types";
+import {
+  fetchPortfolio,
+  fetchPortfolioHistory,
+  fetchWatchlist,
+} from "../lib/api";
+import type { Portfolio, PortfolioSnapshot, WatchlistItem } from "../lib/types";
 
 export default function Home() {
-  const { prices, status } = useSSE();
-  const [portfolio, setPortfolio] = useState<Portfolio>({
-    cash: 10000,
-    positions: [],
-    total_value: 10000,
-    total_pnl: 0,
-  });
+  const { prices, status, getHistory } = useSSE();
   const [watchlist, setWatchlist] = useState<WatchlistItem[]>([]);
+  const [portfolio, setPortfolio] = useState<Portfolio | null>(null);
+  const [snapshots, setSnapshots] = useState<PortfolioSnapshot[]>([]);
+  const [selectedTicker, setSelectedTicker] = useState<string | null>(null);
 
   const refreshData = useCallback(async () => {
     try {
-      const [portfolioData, watchlistData] = await Promise.all([
-        fetchPortfolio(),
+      const [wl, pf, hist] = await Promise.all([
         fetchWatchlist(),
+        fetchPortfolio(),
+        fetchPortfolioHistory(),
       ]);
-      setPortfolio(portfolioData);
-      setWatchlist(watchlistData);
+      setWatchlist(wl);
+      setPortfolio(pf);
+      setSnapshots(hist.snapshots);
     } catch (err) {
       console.error("Failed to refresh data:", err);
     }
   }, []);
 
-  // Fetch initial data on mount
   useEffect(() => {
     refreshData();
   }, [refreshData]);
 
   // Compute live total value from SSE prices when available
+  const positions = portfolio?.positions ?? [];
   const liveTotalValue =
-    portfolio.positions.length > 0
-      ? portfolio.cash +
-        portfolio.positions.reduce((sum, pos) => {
+    positions.length > 0
+      ? (portfolio?.cash ?? 0) +
+        positions.reduce((sum, pos) => {
           const livePrice = prices[pos.ticker]?.price ?? pos.current_price;
           return sum + pos.quantity * livePrice;
         }, 0)
-      : portfolio.total_value;
+      : (portfolio?.total_value ?? 10000);
 
   return (
-    <div className="flex flex-col h-screen">
+    <div className="h-screen flex flex-col bg-[#0d1117]">
       <Header
         totalValue={liveTotalValue}
-        cash={portfolio.cash}
+        cash={portfolio?.cash ?? 0}
         status={status}
       />
 
-      <div className="flex-1 grid grid-cols-1 lg:grid-cols-[1fr_350px] gap-2 p-2 overflow-hidden">
+      <div className="flex-1 grid grid-cols-[1fr_350px] gap-2 p-2 overflow-hidden">
         {/* Left column */}
-        <div className="flex flex-col gap-2 min-h-0">
-          {/* Watchlist panel */}
-          <div className="bg-[#1a1a2e] border border-[#30363d] rounded-lg p-3 overflow-y-auto max-h-[280px]">
-            <h2 className="text-[#8b949e] text-xs uppercase tracking-wider mb-2">
-              Watchlist
-            </h2>
-            <div className="text-[#8b949e] text-sm">
-              {watchlist.length} tickers loaded
-            </div>
-          </div>
+        <div className="flex flex-col gap-2 overflow-hidden">
+          <Watchlist
+            watchlist={watchlist}
+            prices={prices}
+            getHistory={getHistory}
+            selectedTicker={selectedTicker}
+            onSelectTicker={setSelectedTicker}
+            onRefresh={refreshData}
+          />
 
-          {/* Main chart area */}
-          <div className="bg-[#1a1a2e] border border-[#30363d] rounded-lg p-3 flex-1 min-h-[200px]">
-            <h2 className="text-[#8b949e] text-xs uppercase tracking-wider mb-2">
-              Chart
-            </h2>
-            <div className="text-[#8b949e] text-sm">
-              Select a ticker to view chart
-            </div>
-          </div>
+          <TickerChart
+            ticker={selectedTicker}
+            data={selectedTicker ? getHistory(selectedTicker) : []}
+          />
 
-          {/* Trade bar + Positions */}
-          <div className="flex flex-col gap-2">
-            <div className="bg-[#1a1a2e] border border-[#30363d] rounded-lg p-3">
-              <h2 className="text-[#8b949e] text-xs uppercase tracking-wider mb-2">
-                Trade
-              </h2>
-              <div className="text-[#8b949e] text-sm">
-                Trade bar placeholder
-              </div>
-            </div>
-
-            <div className="bg-[#1a1a2e] border border-[#30363d] rounded-lg p-3 overflow-y-auto max-h-[200px]">
-              <h2 className="text-[#8b949e] text-xs uppercase tracking-wider mb-2">
-                Positions
-              </h2>
-              <div className="text-[#8b949e] text-sm">
-                {portfolio.positions.length} positions
-              </div>
-            </div>
+          <div className="grid grid-cols-2 gap-2">
+            <TradeBar
+              selectedTicker={selectedTicker}
+              onTradeComplete={refreshData}
+            />
+            <PositionsTable
+              positions={positions}
+              prices={prices}
+            />
           </div>
         </div>
 
         {/* Right column */}
-        <div className="flex flex-col gap-2 min-h-0">
-          {/* Portfolio heatmap */}
-          <div className="bg-[#1a1a2e] border border-[#30363d] rounded-lg p-3">
-            <h2 className="text-[#8b949e] text-xs uppercase tracking-wider mb-2">
-              Portfolio
-            </h2>
-            <div className="text-[#8b949e] text-sm">
-              Heatmap placeholder
-            </div>
-          </div>
-
-          {/* P&L Chart */}
-          <div className="bg-[#1a1a2e] border border-[#30363d] rounded-lg p-3">
-            <h2 className="text-[#8b949e] text-xs uppercase tracking-wider mb-2">
-              P&L
-            </h2>
-            <div className="text-[#8b949e] text-sm">
-              P&L chart placeholder
-            </div>
-          </div>
-
-          {/* Chat panel */}
-          <div className="bg-[#1a1a2e] border border-[#30363d] rounded-lg p-3 flex-1 min-h-[200px]">
-            <h2 className="text-[#8b949e] text-xs uppercase tracking-wider mb-2">
-              Chat
-            </h2>
-            <div className="text-[#8b949e] text-sm">
-              AI assistant placeholder
-            </div>
-          </div>
+        <div className="flex flex-col gap-2 overflow-hidden">
+          <PortfolioHeatmap positions={positions} />
+          <PnLChart snapshots={snapshots} />
+          <ChatPanel onTradeExecuted={refreshData} />
         </div>
       </div>
     </div>
