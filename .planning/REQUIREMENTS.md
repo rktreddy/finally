@@ -7,8 +7,8 @@
 
 ### Database & Foundation
 
-- [ ] **DB-01**: SQLite database auto-creates schema and seeds default data on first run (lazy init)
-- [ ] **DB-02**: User profile with $10,000 default cash balance persists across restarts
+- [x] **DB-01**: SQLite database auto-creates schema and seeds default data on first run (lazy init)
+- [x] **DB-02**: User profile with $10,000 default cash balance persists across restarts
 - [ ] **DB-03**: FastAPI app entry point with lifespan manages startup/shutdown of all subsystems
 - [ ] **DB-04**: Existing market data (PriceCache, SimulatorDataSource, SSE stream) wired into app lifespan
 - [ ] **DB-05**: Health check endpoint returns server status at GET /api/health
@@ -20,7 +20,7 @@
 - [ ] **WL-02**: User can add a ticker to watchlist via POST /api/watchlist
 - [ ] **WL-03**: User can remove a ticker from watchlist via DELETE /api/watchlist/{ticker}
 - [ ] **WL-04**: Watchlist changes sync with market data source (add_ticker/remove_ticker)
-- [ ] **WL-05**: Default watchlist seeded with 10 tickers (AAPL, GOOGL, MSFT, AMZN, TSLA, NVDA, META, JPM, V, NFLX)
+- [x] **WL-05**: Default watchlist seeded with 10 tickers (AAPL, GOOGL, MSFT, AMZN, TSLA, NVDA, META, JPM, V, NFLX)
 
 ### Portfolio & Trading
 
@@ -127,8 +127,8 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| DB-01 | Phase 1 | Pending |
-| DB-02 | Phase 1 | Pending |
+| DB-01 | Phase 1 | Complete |
+| DB-02 | Phase 1 | Complete |
 | DB-03 | Phase 1 | Pending |
 | DB-04 | Phase 1 | Pending |
 | DB-05 | Phase 1 | Pending |
@@ -137,7 +137,7 @@
 | WL-02 | Phase 2 | Pending |
 | WL-03 | Phase 2 | Pending |
 | WL-04 | Phase 2 | Pending |
-| WL-05 | Phase 1 | Pending |
+| WL-05 | Phase 1 | Complete |
 | PT-01 | Phase 2 | Pending |
 | PT-02 | Phase 2 | Pending |
 | PT-03 | Phase 2 | Pending |

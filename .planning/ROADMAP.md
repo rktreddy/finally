@@ -33,7 +33,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 **Plans**: 2 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — SQLite database layer: schema.sql, init_db(), seed data, and unit tests
+- [x] 01-01-PLAN.md — SQLite database layer: schema.sql, init_db(), seed data, and unit tests
 - [ ] 01-02-PLAN.md — FastAPI app entry point: lifespan, health check, market data wiring, static serving, and integration tests
 
 ### Phase 2: Watchlist & Trading API
