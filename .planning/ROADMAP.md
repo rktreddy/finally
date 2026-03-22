@@ -66,7 +66,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 03-01-PLAN.md — LLM module (models, client, prompts, mock), chat repository functions, litellm dependency, and unit tests
+- [x] 03-01-PLAN.md — LLM module (models, client, prompts, mock), chat repository functions, litellm dependency, and unit tests
 - [ ] 03-02-PLAN.md — Chat route with auto-execution of trades/watchlist changes, wiring into main.py, and integration tests
 
 ### Phase 4: Frontend Terminal

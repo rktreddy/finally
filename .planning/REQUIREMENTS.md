@@ -41,9 +41,9 @@
 - [ ] **LLM-03**: AI can execute trades via structured output (auto-executed, no confirmation)
 - [ ] **LLM-04**: AI can add/remove watchlist tickers via structured output
 - [ ] **LLM-05**: Failed trade validations included in chat response so AI can inform user
-- [ ] **LLM-06**: Chat message history persisted to database
-- [ ] **LLM-07**: LLM_MOCK=true returns deterministic mock responses (for testing)
-- [ ] **LLM-08**: LLM uses LiteLLM → OpenRouter with Cerebras inference (openrouter/openai/gpt-oss-120b)
+- [x] **LLM-06**: Chat message history persisted to database
+- [x] **LLM-07**: LLM_MOCK=true returns deterministic mock responses (for testing)
+- [x] **LLM-08**: LLM uses LiteLLM → OpenRouter with Cerebras inference (openrouter/openai/gpt-oss-120b)
 
 ### Frontend — Layout & Theme
 
@@ -152,9 +152,9 @@
 | LLM-03 | Phase 3 | Pending |
 | LLM-04 | Phase 3 | Pending |
 | LLM-05 | Phase 3 | Pending |
-| LLM-06 | Phase 3 | Pending |
-| LLM-07 | Phase 3 | Pending |
-| LLM-08 | Phase 3 | Pending |
+| LLM-06 | Phase 3 | Complete |
+| LLM-07 | Phase 3 | Complete |
+| LLM-08 | Phase 3 | Complete |
 | UI-01 | Phase 4 | Pending |
 | UI-02 | Phase 4 | Pending |
 | UI-03 | Phase 4 | Pending |
