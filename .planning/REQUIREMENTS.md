@@ -47,10 +47,10 @@
 
 ### Frontend — Layout & Theme
 
-- [ ] **UI-01**: Single-page dark terminal aesthetic (backgrounds #0d1117 or #1a1a2e, muted gray borders)
-- [ ] **UI-02**: Header shows portfolio total value (live-updating), cash balance, connection status indicator
-- [ ] **UI-03**: Accent colors: Yellow #ecad0a, Blue #209dd7, Purple #753991
-- [ ] **UI-04**: Desktop-first responsive layout with all panels visible
+- [x] **UI-01**: Single-page dark terminal aesthetic (backgrounds #0d1117 or #1a1a2e, muted gray borders)
+- [x] **UI-02**: Header shows portfolio total value (live-updating), cash balance, connection status indicator
+- [x] **UI-03**: Accent colors: Yellow #ecad0a, Blue #209dd7, Purple #753991
+- [x] **UI-04**: Desktop-first responsive layout with all panels visible
 
 ### Frontend — Watchlist
 
@@ -73,7 +73,7 @@
 - [ ] **UI-15**: AI chat panel with message input, scrolling conversation history
 - [ ] **UI-16**: Chat shows loading indicator while waiting for LLM response
 - [ ] **UI-17**: Trade executions and watchlist changes shown inline in chat as confirmations
-- [ ] **UI-18**: SSE connection via EventSource with automatic reconnection
+- [x] **UI-18**: SSE connection via EventSource with automatic reconnection
 
 ### Infrastructure
 
@@ -155,10 +155,10 @@
 | LLM-06 | Phase 3 | Complete |
 | LLM-07 | Phase 3 | Complete |
 | LLM-08 | Phase 3 | Complete |
-| UI-01 | Phase 4 | Pending |
-| UI-02 | Phase 4 | Pending |
-| UI-03 | Phase 4 | Pending |
-| UI-04 | Phase 4 | Pending |
+| UI-01 | Phase 4 | Complete |
+| UI-02 | Phase 4 | Complete |
+| UI-03 | Phase 4 | Complete |
+| UI-04 | Phase 4 | Complete |
 | UI-05 | Phase 4 | Complete |
 | UI-06 | Phase 4 | Complete |
 | UI-07 | Phase 4 | Complete |
@@ -172,7 +172,7 @@
 | UI-15 | Phase 4 | Pending |
 | UI-16 | Phase 4 | Pending |
 | UI-17 | Phase 4 | Pending |
-| UI-18 | Phase 4 | Pending |
+| UI-18 | Phase 4 | Complete |
 | INF-01 | Phase 5 | Pending |
 | INF-02 | Phase 5 | Pending |
 | INF-03 | Phase 5 | Pending |

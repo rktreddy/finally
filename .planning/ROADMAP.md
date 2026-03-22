@@ -82,7 +82,7 @@ Plans:
 **Plans**: 3 plans
 
 Plans:
-- [ ] 04-01-PLAN.md — Next.js scaffold, dark theme, SSE hook, types, API client, Header, and layout shell
+- [x] 04-01-PLAN.md — Next.js scaffold, dark theme, SSE hook, types, API client, Header, and layout shell
 - [x] 04-02-PLAN.md — Watchlist panel with sparklines and price flash, main ticker chart, and trade bar
 - [ ] 04-03-PLAN.md — Portfolio heatmap, P&L chart, positions table, AI chat panel, page wiring, and static serving update
 
