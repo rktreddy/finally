@@ -50,7 +50,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 02-01-PLAN.md — Repository layer + watchlist CRUD endpoints (GET/POST/DELETE) with integration tests
+- [x] 02-01-PLAN.md — Repository layer + watchlist CRUD endpoints (GET/POST/DELETE) with integration tests
 - [ ] 02-02-PLAN.md — Portfolio valuation, trade execution, snapshot background task, and portfolio history endpoint with integration tests
 
 ### Phase 3: LLM Chat Integration

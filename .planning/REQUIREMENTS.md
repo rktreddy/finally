@@ -16,10 +16,10 @@
 
 ### Watchlist
 
-- [ ] **WL-01**: User can view watchlist with current prices from GET /api/watchlist
-- [ ] **WL-02**: User can add a ticker to watchlist via POST /api/watchlist
-- [ ] **WL-03**: User can remove a ticker from watchlist via DELETE /api/watchlist/{ticker}
-- [ ] **WL-04**: Watchlist changes sync with market data source (add_ticker/remove_ticker)
+- [x] **WL-01**: User can view watchlist with current prices from GET /api/watchlist
+- [x] **WL-02**: User can add a ticker to watchlist via POST /api/watchlist
+- [x] **WL-03**: User can remove a ticker from watchlist via DELETE /api/watchlist/{ticker}
+- [x] **WL-04**: Watchlist changes sync with market data source (add_ticker/remove_ticker)
 - [x] **WL-05**: Default watchlist seeded with 10 tickers (AAPL, GOOGL, MSFT, AMZN, TSLA, NVDA, META, JPM, V, NFLX)
 
 ### Portfolio & Trading
@@ -133,10 +133,10 @@
 | DB-04 | Phase 1 | Complete |
 | DB-05 | Phase 1 | Complete |
 | DB-06 | Phase 1 | Complete |
-| WL-01 | Phase 2 | Pending |
-| WL-02 | Phase 2 | Pending |
-| WL-03 | Phase 2 | Pending |
-| WL-04 | Phase 2 | Pending |
+| WL-01 | Phase 2 | Complete |
+| WL-02 | Phase 2 | Complete |
+| WL-03 | Phase 2 | Complete |
+| WL-04 | Phase 2 | Complete |
 | WL-05 | Phase 1 | Complete |
 | PT-01 | Phase 2 | Pending |
 | PT-02 | Phase 2 | Pending |
