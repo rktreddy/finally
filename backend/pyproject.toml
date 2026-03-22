@@ -12,6 +12,7 @@ dependencies = [
     "rich>=13.0.0",
     "aiosqlite>=0.22.1",
     "httpx[dev]>=0.28.1",
+    "litellm>=1.82.6",
 ]
 
 [project.optional-dependencies]
