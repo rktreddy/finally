@@ -31,6 +31,8 @@ __all__ = [
     "insert_trade",
     "insert_snapshot",
     "get_snapshots",
+    "insert_chat_message",
+    "get_chat_history",
 ]
 
 
@@ -217,3 +219,41 @@ async def get_snapshots(
     ) as cursor:
         rows = await cursor.fetchall()
         return [dict(row) for row in rows]
+
+
+# --- Chat ---
+
+
+async def insert_chat_message(
+    db: aiosqlite.Connection,
+    role: str,
+    content: str,
+    actions: str | None = None,
+    user_id: str = "default",
+) -> dict:
+    """Insert a chat message and return it as a dict. Commits after insert."""
+    msg_id = str(uuid.uuid4())
+    await db.execute(
+        "INSERT INTO chat_messages (id, user_id, role, content, actions) VALUES (?, ?, ?, ?, ?)",
+        (msg_id, user_id, role, content, actions),
+    )
+    await db.commit()
+
+    async with db.execute(
+        "SELECT id, role, content, actions, created_at FROM chat_messages WHERE id = ?",
+        (msg_id,),
+    ) as cursor:
+        return dict(await cursor.fetchone())
+
+
+async def get_chat_history(
+    db: aiosqlite.Connection, user_id: str = "default", limit: int = 20
+) -> list[dict]:
+    """Return the last N chat messages in chronological order."""
+    async with db.execute(
+        "SELECT role, content, actions, created_at FROM chat_messages "
+        "WHERE user_id = ? ORDER BY created_at DESC, rowid DESC LIMIT ?",
+        (user_id, limit),
+    ) as cursor:
+        rows = await cursor.fetchall()
+        return [dict(row) for row in reversed(rows)]
