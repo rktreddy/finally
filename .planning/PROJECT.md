@@ -27,14 +27,14 @@ Users can watch live-streaming prices, trade a simulated portfolio, and chat wit
 - ✓ FastAPI app entry point with lifespan (start/stop market data, background tasks) — Phase 1
 - ✓ Health check endpoint — Phase 1
 - ✓ Static file serving (API routes take priority) — Phase 1
+- ✓ Watchlist CRUD (add/remove tickers, persist to database, sync with market data source) — Phase 2
+- ✓ Portfolio management (positions, avg cost, unrealized P&L from live prices) — Phase 2
+- ✓ Trade execution (market orders, validation, instant fill, atomic transactions) — Phase 2
+- ✓ Trade history (append-only log) — Phase 2
+- ✓ Portfolio snapshots (30s background task + post-trade, for P&L chart) — Phase 2
 
 ### Active
 
-- [ ] Watchlist CRUD (add/remove tickers, persist to database)
-- [ ] Portfolio management (positions, avg cost, P&L calculations)
-- [ ] Trade execution (market orders, validation, instant fill)
-- [ ] Trade history (append-only log)
-- [ ] Portfolio snapshots (periodic + post-trade, for P&L chart)
 - [ ] LLM integration via LiteLLM → OpenRouter (Cerebras inference)
 - [ ] Structured output parsing (message + trades + watchlist changes)
 - [ ] LLM auto-execution of trades and watchlist changes
@@ -69,7 +69,7 @@ Users can watch live-streaming prices, trade a simulated portfolio, and chat wit
 
 ## Context
 
-- **Existing code:** Market data subsystem is complete in `backend/app/market/` (8 modules, ~500 lines, 73 tests passing at 84% coverage). All other layers have empty directory stubs.
+- **Existing code:** Market data subsystem complete in `backend/app/market/`. Database layer, watchlist API, portfolio/trade API complete in `backend/app/db/` and `backend/app/routes/`. 106 tests passing.
 - **Tech stack:** Python 3.12 / FastAPI / uv (backend), Next.js / TypeScript (frontend), SQLite, LiteLLM → OpenRouter with Cerebras inference
 - **Color scheme:** Accent Yellow `#ecad0a`, Blue Primary `#209dd7`, Purple Secondary `#753991`
 - **Background:** `#0d1117` or `#1a1a2e`, muted gray borders, no pure black
@@ -93,10 +93,11 @@ Users can watch live-streaming prices, trade a simulated portfolio, and chat wit
 |----------|-----------|---------|
 | SSE over WebSockets | One-way push sufficient; simpler, universal browser support | ✓ Good — market data streaming works well |
 | Strategy pattern for market data | Swap simulator/real data transparently | ✓ Good — clean architecture |
-| SQLite with lazy init | Zero config, no migration step, self-contained | — Pending |
+| SQLite with lazy init | Zero config, no migration step, self-contained | ✓ Good — schema created on first run, seed data idempotent |
+| Market orders only | Eliminates order book complexity | ✓ Good — instant fill at PriceCache price, clean portfolio math |
+| Repository pattern for DB | Separate SQL from route handlers | ✓ Good — 12 functions, transaction-aware commit design |
 | Static Next.js export | Single origin, no CORS, one container | — Pending |
 | LLM auto-execution (no confirmation) | Simulated environment, zero stakes, impressive demo | — Pending |
-| Market orders only | Eliminates order book complexity | — Pending |
 
 ## Evolution
 
@@ -116,4 +117,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-22 after Phase 1 completion*
+*Last updated: 2026-03-22 after Phase 2 completion*
