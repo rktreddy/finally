@@ -67,7 +67,7 @@ Plans:
 
 Plans:
 - [x] 03-01-PLAN.md — LLM module (models, client, prompts, mock), chat repository functions, litellm dependency, and unit tests
-- [ ] 03-02-PLAN.md — Chat route with auto-execution of trades/watchlist changes, wiring into main.py, and integration tests
+- [x] 03-02-PLAN.md — Chat route with auto-execution of trades/watchlist changes, wiring into main.py, and integration tests
 
 ### Phase 4: Frontend Terminal
 **Goal**: Users interact with a complete Bloomberg-inspired trading terminal that displays live-streaming prices, charts, portfolio visualizations, a trade bar, and an AI chat panel -- all in a dark, data-dense single-page application

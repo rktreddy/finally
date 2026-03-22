@@ -36,11 +36,11 @@
 
 ### LLM Chat
 
-- [ ] **LLM-01**: User can send chat message and receive AI response via POST /api/chat
-- [ ] **LLM-02**: AI response includes portfolio-aware analysis (cash, positions, P&L, watchlist with prices)
-- [ ] **LLM-03**: AI can execute trades via structured output (auto-executed, no confirmation)
-- [ ] **LLM-04**: AI can add/remove watchlist tickers via structured output
-- [ ] **LLM-05**: Failed trade validations included in chat response so AI can inform user
+- [x] **LLM-01**: User can send chat message and receive AI response via POST /api/chat
+- [x] **LLM-02**: AI response includes portfolio-aware analysis (cash, positions, P&L, watchlist with prices)
+- [x] **LLM-03**: AI can execute trades via structured output (auto-executed, no confirmation)
+- [x] **LLM-04**: AI can add/remove watchlist tickers via structured output
+- [x] **LLM-05**: Failed trade validations included in chat response so AI can inform user
 - [x] **LLM-06**: Chat message history persisted to database
 - [x] **LLM-07**: LLM_MOCK=true returns deterministic mock responses (for testing)
 - [x] **LLM-08**: LLM uses LiteLLM → OpenRouter with Cerebras inference (openrouter/openai/gpt-oss-120b)
@@ -147,11 +147,11 @@
 | PT-07 | Phase 2 | Complete |
 | PT-08 | Phase 2 | Complete |
 | PT-09 | Phase 2 | Complete |
-| LLM-01 | Phase 3 | Pending |
-| LLM-02 | Phase 3 | Pending |
-| LLM-03 | Phase 3 | Pending |
-| LLM-04 | Phase 3 | Pending |
-| LLM-05 | Phase 3 | Pending |
+| LLM-01 | Phase 3 | Complete |
+| LLM-02 | Phase 3 | Complete |
+| LLM-03 | Phase 3 | Complete |
+| LLM-04 | Phase 3 | Complete |
+| LLM-05 | Phase 3 | Complete |
 | LLM-06 | Phase 3 | Complete |
 | LLM-07 | Phase 3 | Complete |
 | LLM-08 | Phase 3 | Complete |
