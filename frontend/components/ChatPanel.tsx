@@ -105,7 +105,7 @@ export default function ChatPanel({ onTradeExecuted }: ChatPanelProps) {
                   >
                     {trade.side === "buy" ? "Bought" : "Sold"} {trade.quantity}{" "}
                     {trade.ticker} at ${trade.price.toFixed(2)}
-                    {trade.status !== "success" && (
+                    {trade.status === "failed" && (
                       <span className="text-red-400 ml-2">({trade.status})</span>
                     )}
                   </div>
@@ -118,7 +118,7 @@ export default function ChatPanel({ onTradeExecuted }: ChatPanelProps) {
                     {change.action === "add" ? "Added" : "Removed"}{" "}
                     {change.ticker} {change.action === "add" ? "to" : "from"}{" "}
                     watchlist
-                    {change.status !== "success" && (
+                    {change.status === "failed" && (
                       <span className="text-red-400 ml-2">({change.status})</span>
                     )}
                   </div>
