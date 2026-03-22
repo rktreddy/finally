@@ -21,18 +21,20 @@ Users can watch live-streaming prices, trade a simulated portfolio, and chat wit
 - ✓ SSE streaming endpoint for price updates — existing
 - ✓ Dynamic ticker add/remove on data sources — existing
 - ✓ Backend project structure with uv, FastAPI, pytest, ruff — existing
+- ✓ SQLite database with lazy initialization (schema + seed on first run) — Phase 1
+- ✓ User profile management (cash balance tracking, $10k default) — Phase 1
+- ✓ Default watchlist seeded with 10 tickers — Phase 1
+- ✓ FastAPI app entry point with lifespan (start/stop market data, background tasks) — Phase 1
+- ✓ Health check endpoint — Phase 1
+- ✓ Static file serving (API routes take priority) — Phase 1
 
 ### Active
 
-- [ ] SQLite database with lazy initialization (schema + seed on first run)
-- [ ] User profile management (cash balance tracking)
 - [ ] Watchlist CRUD (add/remove tickers, persist to database)
 - [ ] Portfolio management (positions, avg cost, P&L calculations)
 - [ ] Trade execution (market orders, validation, instant fill)
 - [ ] Trade history (append-only log)
 - [ ] Portfolio snapshots (periodic + post-trade, for P&L chart)
-- [ ] FastAPI app entry point with lifespan (start/stop market data, background tasks)
-- [ ] Health check endpoint
 - [ ] LLM integration via LiteLLM → OpenRouter (Cerebras inference)
 - [ ] Structured output parsing (message + trades + watchlist changes)
 - [ ] LLM auto-execution of trades and watchlist changes
@@ -114,4 +116,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-21 after initialization*
+*Last updated: 2026-03-22 after Phase 1 completion*
