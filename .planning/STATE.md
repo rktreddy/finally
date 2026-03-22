@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-21)
 
 **Core value:** Users can watch live-streaming prices, trade a simulated portfolio, and chat with an AI assistant that executes trades -- all in a Bloomberg-inspired terminal interface.
-**Current focus:** Phase 03 — llm-chat-integration
+**Current focus:** Phase 04 — Frontend Terminal
 
 ## Current Position
 
-Phase: 03 (llm-chat-integration) — EXECUTING
-Plan: 2 of 2
+Phase: 4
+Plan: Not started
 
 ## Performance Metrics
 

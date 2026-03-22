@@ -33,13 +33,14 @@ Users can watch live-streaming prices, trade a simulated portfolio, and chat wit
 - ✓ Trade history (append-only log) — Phase 2
 - ✓ Portfolio snapshots (30s background task + post-trade, for P&L chart) — Phase 2
 
+- ✓ LLM integration via LiteLLM → OpenRouter with Cerebras inference — Phase 3
+- ✓ Structured output parsing (message + trades + watchlist changes) — Phase 3
+- ✓ LLM auto-execution of trades and watchlist changes — Phase 3
+- ✓ LLM mock mode for testing (LLM_MOCK=true) — Phase 3
+- ✓ Chat message persistence — Phase 3
+
 ### Active
 
-- [ ] LLM integration via LiteLLM → OpenRouter (Cerebras inference)
-- [ ] Structured output parsing (message + trades + watchlist changes)
-- [ ] LLM auto-execution of trades and watchlist changes
-- [ ] LLM mock mode for testing (LLM_MOCK=true)
-- [ ] Chat message persistence
 - [ ] Next.js frontend with static export
 - [ ] Dark trading terminal aesthetic (Bloomberg-inspired)
 - [ ] Watchlist panel with live prices, flash animations, sparklines
@@ -69,7 +70,7 @@ Users can watch live-streaming prices, trade a simulated portfolio, and chat wit
 
 ## Context
 
-- **Existing code:** Market data subsystem complete in `backend/app/market/`. Database layer, watchlist API, portfolio/trade API complete in `backend/app/db/` and `backend/app/routes/`. 106 tests passing.
+- **Existing code:** Market data subsystem complete in `backend/app/market/`. Database layer, watchlist API, portfolio/trade API, LLM chat integration complete in `backend/app/db/`, `backend/app/routes/`, and `backend/app/llm/`. 136 tests passing.
 - **Tech stack:** Python 3.12 / FastAPI / uv (backend), Next.js / TypeScript (frontend), SQLite, LiteLLM → OpenRouter with Cerebras inference
 - **Color scheme:** Accent Yellow `#ecad0a`, Blue Primary `#209dd7`, Purple Secondary `#753991`
 - **Background:** `#0d1117` or `#1a1a2e`, muted gray borders, no pure black
@@ -97,7 +98,7 @@ Users can watch live-streaming prices, trade a simulated portfolio, and chat wit
 | Market orders only | Eliminates order book complexity | ✓ Good — instant fill at PriceCache price, clean portfolio math |
 | Repository pattern for DB | Separate SQL from route handlers | ✓ Good — 12 functions, transaction-aware commit design |
 | Static Next.js export | Single origin, no CORS, one container | — Pending |
-| LLM auto-execution (no confirmation) | Simulated environment, zero stakes, impressive demo | — Pending |
+| LLM auto-execution (no confirmation) | Simulated environment, zero stakes, impressive demo | ✓ Good — auto-executes trades and watchlist changes from structured output |
 
 ## Evolution
 
@@ -117,4 +118,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-22 after Phase 2 completion*
+*Last updated: 2026-03-22 after Phase 3 completion*

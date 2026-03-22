@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Foundation** - Database, app lifespan, health check, static file serving, and market data wiring
 - [x] **Phase 2: Watchlist & Trading API** - Watchlist CRUD and portfolio/trade endpoints with full validation
-- [ ] **Phase 3: LLM Chat Integration** - AI assistant with portfolio-aware analysis and auto-trade execution
+- [x] **Phase 3: LLM Chat Integration** - AI assistant with portfolio-aware analysis and auto-trade execution
 - [ ] **Phase 4: Frontend Terminal** - Bloomberg-inspired single-page trading terminal with all panels
 - [ ] **Phase 5: Docker & E2E Testing** - Multi-stage container build, scripts, and Playwright end-to-end tests
 
@@ -110,6 +110,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 |-------|----------------|--------|-----------|
 | 1. Foundation | 2/2 | Complete | 2026-03-22 |
 | 2. Watchlist & Trading API | 2/2 | Complete | 2026-03-22 |
-| 3. LLM Chat Integration | 0/2 | Not started | - |
+| 3. LLM Chat Integration | 2/2 | Complete | 2026-03-22 |
 | 4. Frontend Terminal | 0/3 | Not started | - |
 | 5. Docker & E2E Testing | 0/2 | Not started | - |
