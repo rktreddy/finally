@@ -11,6 +11,7 @@ dependencies = [
     "massive>=1.0.0",
     "rich>=13.0.0",
     "aiosqlite>=0.22.1",
+    "httpx[dev]>=0.28.1",
 ]
 
 [project.optional-dependencies]
