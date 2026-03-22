@@ -63,16 +63,16 @@
 ### Frontend — Charts & Visualization
 
 - [x] **UI-10**: Main chart area shows price-over-time for selected ticker
-- [ ] **UI-11**: Portfolio heatmap (treemap) — positions sized by weight, colored by P&L
-- [ ] **UI-12**: P&L chart shows total portfolio value over time (line chart from snapshots)
-- [ ] **UI-13**: Positions table shows ticker, quantity, avg cost, current price, unrealized P&L, % change
+- [x] **UI-11**: Portfolio heatmap (treemap) — positions sized by weight, colored by P&L
+- [x] **UI-12**: P&L chart shows total portfolio value over time (line chart from snapshots)
+- [x] **UI-13**: Positions table shows ticker, quantity, avg cost, current price, unrealized P&L, % change
 
 ### Frontend — Trading & Chat
 
 - [x] **UI-14**: Trade bar with ticker field, quantity field, buy button, sell button
-- [ ] **UI-15**: AI chat panel with message input, scrolling conversation history
-- [ ] **UI-16**: Chat shows loading indicator while waiting for LLM response
-- [ ] **UI-17**: Trade executions and watchlist changes shown inline in chat as confirmations
+- [x] **UI-15**: AI chat panel with message input, scrolling conversation history
+- [x] **UI-16**: Chat shows loading indicator while waiting for LLM response
+- [x] **UI-17**: Trade executions and watchlist changes shown inline in chat as confirmations
 - [x] **UI-18**: SSE connection via EventSource with automatic reconnection
 
 ### Infrastructure
@@ -165,13 +165,13 @@
 | UI-08 | Phase 4 | Complete |
 | UI-09 | Phase 4 | Complete |
 | UI-10 | Phase 4 | Complete |
-| UI-11 | Phase 4 | Pending |
-| UI-12 | Phase 4 | Pending |
-| UI-13 | Phase 4 | Pending |
+| UI-11 | Phase 4 | Complete |
+| UI-12 | Phase 4 | Complete |
+| UI-13 | Phase 4 | Complete |
 | UI-14 | Phase 4 | Complete |
-| UI-15 | Phase 4 | Pending |
-| UI-16 | Phase 4 | Pending |
-| UI-17 | Phase 4 | Pending |
+| UI-15 | Phase 4 | Complete |
+| UI-16 | Phase 4 | Complete |
+| UI-17 | Phase 4 | Complete |
 | UI-18 | Phase 4 | Complete |
 | INF-01 | Phase 5 | Pending |
 | INF-02 | Phase 5 | Pending |
