@@ -12,6 +12,7 @@ from starlette.staticfiles import StaticFiles
 
 from app.db import get_db_path, init_db
 from app.market import PriceCache, create_market_data_source, create_stream_router
+from app.routes.chat import router as chat_router
 from app.routes.health import router as health_router
 from app.routes.portfolio import router as portfolio_router
 from app.routes.portfolio import snapshot_loop
@@ -76,6 +77,7 @@ app = FastAPI(title="FinAlly", lifespan=lifespan)
 app.include_router(health_router, prefix="/api")
 app.include_router(watchlist_router, prefix="/api")
 app.include_router(portfolio_router, prefix="/api")
+app.include_router(chat_router, prefix="/api")
 app.include_router(create_stream_router(price_cache))
 
 # Static files LAST -- catch-all for frontend (D-12, D-13)
