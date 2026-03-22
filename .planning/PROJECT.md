@@ -51,12 +51,14 @@ Users can watch live-streaming prices, trade a simulated portfolio, and chat wit
 - ✓ Header with portfolio value, cash balance, connection status indicator — Phase 4
 - ✓ SSE connection with EventSource and auto-reconnection — Phase 4
 
+- ✓ Multi-stage Dockerfile (Node 20 → Python 3.12) — Phase 5
+- ✓ Start/stop scripts (macOS/Linux + Windows PowerShell) — Phase 5
+- ✓ Docker volume for SQLite persistence — Phase 5
+- ✓ Playwright E2E tests with docker-compose.test.yml — Phase 5
+
 ### Active
 
-- [ ] Multi-stage Dockerfile (Node build → Python runtime)
-- [ ] Start/stop scripts (macOS/Linux + Windows PowerShell)
-- [ ] Docker volume for SQLite persistence
-- [ ] Playwright E2E tests with docker-compose.test.yml
+All v1 requirements complete.
 
 ### Out of Scope
 
@@ -119,4 +121,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-03-22 after Phase 4 completion*
+*Last updated: 2026-03-22 after Phase 5 completion — all v1 phases complete*
