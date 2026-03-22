@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 05-01-PLAN.md
-last_updated: "2026-03-22T16:09:40.143Z"
+stopped_at: Completed 05-02-PLAN.md
+last_updated: "2026-03-22T16:15:03.767Z"
 progress:
   total_phases: 5
-  completed_phases: 4
+  completed_phases: 5
   total_plans: 11
-  completed_plans: 10
+  completed_plans: 11
 ---
 
 # Project State
@@ -56,6 +56,7 @@ Plan: 2 of 2
 | Phase 04-frontend-terminal P01 | 6min | 2 tasks | 16 files |
 | Phase 04-frontend-terminal P03 | 3min | 3 tasks | 6 files |
 | Phase 05 P01 | 2min | 2 tasks | 9 files |
+| Phase 05 P02 | 2min | 2 tasks | 9 files |
 
 ## Accumulated Context
 
@@ -76,6 +77,7 @@ Recent decisions affecting current work:
 - [Phase 04-frontend-terminal]: Used Tailwind v4 @theme inline for custom colors; kept pre-generated components from create-next-app template; root .gitignore negated for frontend/lib/
 - [Phase 04-frontend-terminal]: Custom SVG content renderer for Recharts Treemap with P&L-based coloring; live price fallback in PositionsTable; backend static dir prefers frontend/out/ with static/ fallback
 - [Phase 05]: DB_PATH=/app/db/finally.db with volume at /app/db for SQLite persistence; frontend output at /app/frontend/out aligned with main.py Path resolution
+- [Phase 05]: Tests use real selectors from frontend source: aria-labels, placeholder text, button text
 
 ### Pending Todos
 
@@ -87,6 +89,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-22T16:09:40.135Z
-Stopped at: Completed 05-01-PLAN.md
+Last session: 2026-03-22T16:15:03.760Z
+Stopped at: Completed 05-02-PLAN.md
 Resume file: None

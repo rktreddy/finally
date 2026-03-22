@@ -82,12 +82,12 @@
 - [x] **INF-03**: Start script for macOS/Linux (scripts/start_mac.sh)
 - [x] **INF-04**: Stop script for macOS/Linux (scripts/stop_mac.sh)
 - [x] **INF-05**: Start/stop scripts for Windows PowerShell
-- [ ] **INF-06**: Playwright E2E tests with docker-compose.test.yml
-- [ ] **INF-07**: E2E: fresh start shows default watchlist, $10k balance, streaming prices
-- [ ] **INF-08**: E2E: add/remove ticker from watchlist
-- [ ] **INF-09**: E2E: buy shares — cash decreases, position appears
-- [ ] **INF-10**: E2E: sell shares — cash increases, position updates
-- [ ] **INF-11**: E2E: AI chat (mocked) — send message, receive response, trade execution inline
+- [x] **INF-06**: Playwright E2E tests with docker-compose.test.yml
+- [x] **INF-07**: E2E: fresh start shows default watchlist, $10k balance, streaming prices
+- [x] **INF-08**: E2E: add/remove ticker from watchlist
+- [x] **INF-09**: E2E: buy shares — cash decreases, position appears
+- [x] **INF-10**: E2E: sell shares — cash increases, position updates
+- [x] **INF-11**: E2E: AI chat (mocked) — send message, receive response, trade execution inline
 
 ## v2 Requirements
 
@@ -178,12 +178,12 @@
 | INF-03 | Phase 5 | Complete |
 | INF-04 | Phase 5 | Complete |
 | INF-05 | Phase 5 | Complete |
-| INF-06 | Phase 5 | Pending |
-| INF-07 | Phase 5 | Pending |
-| INF-08 | Phase 5 | Pending |
-| INF-09 | Phase 5 | Pending |
-| INF-10 | Phase 5 | Pending |
-| INF-11 | Phase 5 | Pending |
+| INF-06 | Phase 5 | Complete |
+| INF-07 | Phase 5 | Complete |
+| INF-08 | Phase 5 | Complete |
+| INF-09 | Phase 5 | Complete |
+| INF-10 | Phase 5 | Complete |
+| INF-11 | Phase 5 | Complete |
 
 **Coverage:**
 - v1 requirements: 47 total
