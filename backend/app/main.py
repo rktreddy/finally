@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import asyncio
 import logging
 from contextlib import asynccontextmanager
 from pathlib import Path
@@ -12,6 +13,8 @@ from starlette.staticfiles import StaticFiles
 from app.db import get_db_path, init_db
 from app.market import PriceCache, create_market_data_source, create_stream_router
 from app.routes.health import router as health_router
+from app.routes.portfolio import router as portfolio_router
+from app.routes.portfolio import snapshot_loop
 from app.routes.watchlist import router as watchlist_router
 
 logger = logging.getLogger(__name__)
@@ -47,9 +50,20 @@ async def lifespan(app: FastAPI):
     logger.info("Starting market data source with %d tickers", len(tickers))
     await source.start(tickers)
 
+    # Portfolio snapshot background task
+    snapshot_task = asyncio.create_task(snapshot_loop(app))
+    app.state.snapshot_task = snapshot_task
+
     yield
 
     # --- Shutdown (D-03) ---
+    # Cancel snapshot task before closing DB
+    snapshot_task.cancel()
+    try:
+        await snapshot_task
+    except asyncio.CancelledError:
+        pass
+
     logger.info("Shutting down market data source")
     await source.stop()
     logger.info("Closing database connection")
@@ -61,6 +75,7 @@ app = FastAPI(title="FinAlly", lifespan=lifespan)
 # API routes FIRST (D-13)
 app.include_router(health_router, prefix="/api")
 app.include_router(watchlist_router, prefix="/api")
+app.include_router(portfolio_router, prefix="/api")
 app.include_router(create_stream_router(price_cache))
 
 # Static files LAST -- catch-all for frontend (D-12, D-13)
