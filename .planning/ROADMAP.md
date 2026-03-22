@@ -79,12 +79,12 @@ Plans:
   3. The portfolio section displays a heatmap (treemap) of positions colored by P&L, a line chart of portfolio value over time, and a positions table with unrealized P&L
   4. Users can execute trades via the trade bar (ticker, quantity, buy/sell) and see immediate portfolio updates
   5. The AI chat panel accepts messages, shows a loading indicator during LLM calls, displays responses with inline trade and watchlist change confirmations, and scrolls through conversation history
-**Plans**: TBD
+**Plans**: 3 plans
 
 Plans:
-- [ ] 04-01: TBD
-- [ ] 04-02: TBD
-- [ ] 04-03: TBD
+- [ ] 04-01-PLAN.md — Next.js scaffold, dark theme, SSE hook, types, API client, Header, and layout shell
+- [ ] 04-02-PLAN.md — Watchlist panel with sparklines and price flash, main ticker chart, and trade bar
+- [ ] 04-03-PLAN.md — Portfolio heatmap, P&L chart, positions table, AI chat panel, page wiring, and static serving update
 
 ### Phase 5: Docker & E2E Testing
 **Goal**: The entire application ships as a single Docker container built from a multi-stage Dockerfile, with start/stop scripts and Playwright E2E tests validating all critical user workflows
