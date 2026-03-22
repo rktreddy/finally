@@ -98,7 +98,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 05-01-PLAN.md — Dockerfile, docker-compose.yml, start/stop scripts, .env.example, and .dockerignore
+- [x] 05-01-PLAN.md — Dockerfile, docker-compose.yml, start/stop scripts, .env.example, and .dockerignore
 - [ ] 05-02-PLAN.md — E2E test infrastructure (docker-compose.test.yml, Playwright config) and Playwright test suite
 
 ## Progress

@@ -3,13 +3,13 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: unknown
-stopped_at: Completed 04-03-PLAN.md
-last_updated: "2026-03-22T15:52:59.645Z"
+stopped_at: Completed 05-01-PLAN.md
+last_updated: "2026-03-22T16:09:40.143Z"
 progress:
   total_phases: 5
   completed_phases: 4
-  total_plans: 9
-  completed_plans: 9
+  total_plans: 11
+  completed_plans: 10
 ---
 
 # Project State
@@ -19,12 +19,12 @@ progress:
 See: .planning/PROJECT.md (updated 2026-03-21)
 
 **Core value:** Users can watch live-streaming prices, trade a simulated portfolio, and chat with an AI assistant that executes trades -- all in a Bloomberg-inspired terminal interface.
-**Current focus:** Phase 05 — Docker & E2E Testing
+**Current focus:** Phase 05 — docker-e2e-testing
 
 ## Current Position
 
-Phase: 5
-Plan: Not started
+Phase: 05 (docker-e2e-testing) — EXECUTING
+Plan: 2 of 2
 
 ## Performance Metrics
 
@@ -55,6 +55,7 @@ Plan: Not started
 | Phase 04-frontend-terminal P02 | 3min | 2 tasks | 5 files |
 | Phase 04-frontend-terminal P01 | 6min | 2 tasks | 16 files |
 | Phase 04-frontend-terminal P03 | 3min | 3 tasks | 6 files |
+| Phase 05 P01 | 2min | 2 tasks | 9 files |
 
 ## Accumulated Context
 
@@ -74,6 +75,7 @@ Recent decisions affecting current work:
 - [Phase 04-frontend-terminal]: Dynamic import for lightweight-charts to avoid SSR issues; ResizeObserver for responsive chart width
 - [Phase 04-frontend-terminal]: Used Tailwind v4 @theme inline for custom colors; kept pre-generated components from create-next-app template; root .gitignore negated for frontend/lib/
 - [Phase 04-frontend-terminal]: Custom SVG content renderer for Recharts Treemap with P&L-based coloring; live price fallback in PositionsTable; backend static dir prefers frontend/out/ with static/ fallback
+- [Phase 05]: DB_PATH=/app/db/finally.db with volume at /app/db for SQLite persistence; frontend output at /app/frontend/out aligned with main.py Path resolution
 
 ### Pending Todos
 
@@ -85,6 +87,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-03-22T15:52:59.638Z
-Stopped at: Completed 04-03-PLAN.md
+Last session: 2026-03-22T16:09:40.135Z
+Stopped at: Completed 05-01-PLAN.md
 Resume file: None

@@ -77,11 +77,11 @@
 
 ### Infrastructure
 
-- [ ] **INF-01**: Multi-stage Dockerfile (Node 20 → Python 3.12) producing single container on port 8000
-- [ ] **INF-02**: Docker volume mount for SQLite persistence (db/finally.db)
-- [ ] **INF-03**: Start script for macOS/Linux (scripts/start_mac.sh)
-- [ ] **INF-04**: Stop script for macOS/Linux (scripts/stop_mac.sh)
-- [ ] **INF-05**: Start/stop scripts for Windows PowerShell
+- [x] **INF-01**: Multi-stage Dockerfile (Node 20 → Python 3.12) producing single container on port 8000
+- [x] **INF-02**: Docker volume mount for SQLite persistence (db/finally.db)
+- [x] **INF-03**: Start script for macOS/Linux (scripts/start_mac.sh)
+- [x] **INF-04**: Stop script for macOS/Linux (scripts/stop_mac.sh)
+- [x] **INF-05**: Start/stop scripts for Windows PowerShell
 - [ ] **INF-06**: Playwright E2E tests with docker-compose.test.yml
 - [ ] **INF-07**: E2E: fresh start shows default watchlist, $10k balance, streaming prices
 - [ ] **INF-08**: E2E: add/remove ticker from watchlist
@@ -173,11 +173,11 @@
 | UI-16 | Phase 4 | Complete |
 | UI-17 | Phase 4 | Complete |
 | UI-18 | Phase 4 | Complete |
-| INF-01 | Phase 5 | Pending |
-| INF-02 | Phase 5 | Pending |
-| INF-03 | Phase 5 | Pending |
-| INF-04 | Phase 5 | Pending |
-| INF-05 | Phase 5 | Pending |
+| INF-01 | Phase 5 | Complete |
+| INF-02 | Phase 5 | Complete |
+| INF-03 | Phase 5 | Complete |
+| INF-04 | Phase 5 | Complete |
+| INF-05 | Phase 5 | Complete |
 | INF-06 | Phase 5 | Pending |
 | INF-07 | Phase 5 | Pending |
 | INF-08 | Phase 5 | Pending |
