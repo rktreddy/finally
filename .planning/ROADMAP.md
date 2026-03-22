@@ -47,11 +47,11 @@ Plans:
   4. POST /api/portfolio/trade with side=sell increases cash, updates/removes the position, and records the trade; rejects with error if insufficient shares
   5. GET /api/portfolio returns current positions with unrealized P&L calculated from live prices, total portfolio value, and cash balance
   6. Portfolio snapshots are recorded every 30 seconds by a background task and immediately after each trade; GET /api/portfolio/history returns the snapshot timeline
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 02-01: TBD
-- [ ] 02-02: TBD
+- [ ] 02-01-PLAN.md — Repository layer + watchlist CRUD endpoints (GET/POST/DELETE) with integration tests
+- [ ] 02-02-PLAN.md — Portfolio valuation, trade execution, snapshot background task, and portfolio history endpoint with integration tests
 
 ### Phase 3: LLM Chat Integration
 **Goal**: Users can chat with an AI assistant that understands their portfolio and can autonomously execute trades and manage the watchlist through natural language
@@ -108,8 +108,8 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Foundation | 0/2 | Not started | - |
-| 2. Watchlist & Trading API | 0/2 | Not started | - |
+| 1. Foundation | 2/2 | Complete | 2026-03-22 |
+| 2. Watchlist & Trading API | 0/2 | In Progress | - |
 | 3. LLM Chat Integration | 0/2 | Not started | - |
 | 4. Frontend Terminal | 0/3 | Not started | - |
 | 5. Docker & E2E Testing | 0/2 | Not started | - |
