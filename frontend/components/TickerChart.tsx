@@ -61,7 +61,7 @@ export default function TickerChart({ ticker, data }: TickerChartProps) {
       // Set initial data
       if (data.length > 0) {
         series.setData(
-          data.map((d) => ({ time: d.time as unknown as number, value: d.value }))
+          data.map((d) => ({ time: d.time as UTCTimestamp, value: d.value }))
         );
       }
 
@@ -92,7 +92,7 @@ export default function TickerChart({ ticker, data }: TickerChartProps) {
   useEffect(() => {
     if (seriesRef.current && data.length > 0) {
       seriesRef.current.setData(
-        data.map((d) => ({ time: d.time as unknown as number, value: d.value }))
+        data.map((d) => ({ time: d.time as UTCTimestamp, value: d.value }))
       );
     }
   }, [data]);

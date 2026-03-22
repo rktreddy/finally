@@ -54,22 +54,22 @@
 
 ### Frontend — Watchlist
 
-- [ ] **UI-05**: Watchlist panel shows ticker, current price, daily change %, sparkline mini-chart
-- [ ] **UI-06**: Prices flash green (uptick) or red (downtick) with ~500ms CSS fade animation
-- [ ] **UI-07**: Sparklines accumulate progressively from SSE data since page load
-- [ ] **UI-08**: Clicking a ticker selects it for the main chart area
-- [ ] **UI-09**: User can add/remove tickers from watchlist via UI controls
+- [x] **UI-05**: Watchlist panel shows ticker, current price, daily change %, sparkline mini-chart
+- [x] **UI-06**: Prices flash green (uptick) or red (downtick) with ~500ms CSS fade animation
+- [x] **UI-07**: Sparklines accumulate progressively from SSE data since page load
+- [x] **UI-08**: Clicking a ticker selects it for the main chart area
+- [x] **UI-09**: User can add/remove tickers from watchlist via UI controls
 
 ### Frontend — Charts & Visualization
 
-- [ ] **UI-10**: Main chart area shows price-over-time for selected ticker
+- [x] **UI-10**: Main chart area shows price-over-time for selected ticker
 - [ ] **UI-11**: Portfolio heatmap (treemap) — positions sized by weight, colored by P&L
 - [ ] **UI-12**: P&L chart shows total portfolio value over time (line chart from snapshots)
 - [ ] **UI-13**: Positions table shows ticker, quantity, avg cost, current price, unrealized P&L, % change
 
 ### Frontend — Trading & Chat
 
-- [ ] **UI-14**: Trade bar with ticker field, quantity field, buy button, sell button
+- [x] **UI-14**: Trade bar with ticker field, quantity field, buy button, sell button
 - [ ] **UI-15**: AI chat panel with message input, scrolling conversation history
 - [ ] **UI-16**: Chat shows loading indicator while waiting for LLM response
 - [ ] **UI-17**: Trade executions and watchlist changes shown inline in chat as confirmations
@@ -159,16 +159,16 @@
 | UI-02 | Phase 4 | Pending |
 | UI-03 | Phase 4 | Pending |
 | UI-04 | Phase 4 | Pending |
-| UI-05 | Phase 4 | Pending |
-| UI-06 | Phase 4 | Pending |
-| UI-07 | Phase 4 | Pending |
-| UI-08 | Phase 4 | Pending |
-| UI-09 | Phase 4 | Pending |
-| UI-10 | Phase 4 | Pending |
+| UI-05 | Phase 4 | Complete |
+| UI-06 | Phase 4 | Complete |
+| UI-07 | Phase 4 | Complete |
+| UI-08 | Phase 4 | Complete |
+| UI-09 | Phase 4 | Complete |
+| UI-10 | Phase 4 | Complete |
 | UI-11 | Phase 4 | Pending |
 | UI-12 | Phase 4 | Pending |
 | UI-13 | Phase 4 | Pending |
-| UI-14 | Phase 4 | Pending |
+| UI-14 | Phase 4 | Complete |
 | UI-15 | Phase 4 | Pending |
 | UI-16 | Phase 4 | Pending |
 | UI-17 | Phase 4 | Pending |
