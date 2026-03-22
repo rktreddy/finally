@@ -30,11 +30,11 @@ Decimal phases appear between their surrounding integers in numeric order.
   3. The existing market data simulator starts on app startup and stops on shutdown, with prices flowing into PriceCache
   4. The app serves a placeholder index.html (or static files) at the root URL, with API routes taking priority over the catch-all
   5. Restarting the app preserves previously persisted data (no re-seed if data exists)
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
+- [ ] 01-01-PLAN.md — SQLite database layer: schema.sql, init_db(), seed data, and unit tests
+- [ ] 01-02-PLAN.md — FastAPI app entry point: lifespan, health check, market data wiring, static serving, and integration tests
 
 ### Phase 2: Watchlist & Trading API
 **Goal**: Users can manage their watchlist and execute trades through REST API endpoints, with all positions, P&L, and trade history properly tracked
