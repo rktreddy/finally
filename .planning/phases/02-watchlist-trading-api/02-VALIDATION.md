@@ -40,7 +40,7 @@ created: 2026-03-21
 |---------|------|------|-------------|-----------|-------------------|-------------|--------|
 | 02-01-01 | 01 | 1 | WL-01, WL-02, WL-03, WL-04 | integration | `cd backend && uv run pytest tests/test_watchlist.py -v` | ❌ W0 | ⬜ pending |
 | 02-02-01 | 02 | 1 | PT-01, PT-02, PT-03, PT-04, PT-05, PT-06 | integration | `cd backend && uv run pytest tests/test_portfolio.py -v` | ❌ W0 | ⬜ pending |
-| 02-02-02 | 02 | 1 | PT-07, PT-08, PT-09 | integration | `cd backend && uv run pytest tests/test_snapshots.py -v` | ❌ W0 | ⬜ pending |
+| 02-02-02 | 02 | 1 | PT-07, PT-08, PT-09 | integration | `cd backend && uv run pytest tests/test_portfolio.py -v -k snapshot` | ❌ W0 | ⬜ pending |
 
 *Status: ⬜ pending · ✅ green · ❌ red · ⚠️ flaky*
 
@@ -50,7 +50,7 @@ created: 2026-03-21
 
 - [ ] `backend/tests/test_watchlist.py` — stubs for WL-01 through WL-04
 - [ ] `backend/tests/test_portfolio.py` — stubs for PT-01 through PT-06
-- [ ] `backend/tests/test_snapshots.py` — stubs for PT-07 through PT-09
+- [ ] `backend/tests/test_portfolio.py` — includes snapshot tests for PT-07 through PT-09
 
 *Existing infrastructure (conftest.py, httpx client fixture, async test config) covers all shared needs.*
 
