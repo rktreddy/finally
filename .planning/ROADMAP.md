@@ -95,11 +95,11 @@ Plans:
   2. The stop script cleanly stops the container without destroying persisted data
   3. E2E tests confirm: fresh start shows default watchlist with 10 tickers, $10k cash balance, and prices streaming via SSE
   4. E2E tests confirm: watchlist add/remove, buy shares (cash decreases, position appears), sell shares (cash increases, position updates), and AI chat with mocked responses all work end-to-end
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 05-01: TBD
-- [ ] 05-02: TBD
+- [ ] 05-01-PLAN.md — Dockerfile, docker-compose.yml, start/stop scripts, .env.example, and .dockerignore
+- [ ] 05-02-PLAN.md — E2E test infrastructure (docker-compose.test.yml, Playwright config) and Playwright test suite
 
 ## Progress
 
